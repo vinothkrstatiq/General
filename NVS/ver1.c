@@ -99,11 +99,15 @@ void app_main(void)
 		        ret = nvs_flash_init();
 		    }
 	int gg =0;
-	char mm[100];
-	NVS_Write("data","hello ");
-	NVS_Read("data",mm);
+	char ssid[100];
+	char password[100];
+	NVS_Write("ssid","hello");
+	NVS_Write("password","12345");
+	NVS_Read("ssid",ssid);
+	NVS_Read("password",password);
 
-	printf("str data = %s\n",mm);
+	printf("str 1 = %s\n",ssid);
+	printf("str 2 = %s\n",password);
 
 
 }
